@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { StickySteps } from "../components/ui/stickysteps";
-import Image from "next/image";
+// import Image from "next/image";`
 
 export const Steps = () => {
     const content = [
