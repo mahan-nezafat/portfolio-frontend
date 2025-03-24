@@ -9,11 +9,9 @@ COPY . .
 
 RUN npm install
 
-
+RUN npm build
 
 EXPOSE 3000
-RUN chown -R root:root /frontend
-RUN chmod 755 /frontend
-USER root
 
-CMD ./setup.sh
+
+CMD ["npm", "start"]
