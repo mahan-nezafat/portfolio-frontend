@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Link from "next/link";
 // import * as hero from "../../public/images/hero.webp";
-import * as heroSvg from "../../public/images/hero.svg";
+import * as heroSvg from "../../public/images/avatar.png";
 export const Hero = () => {
     return (
         <div className="w-full h-full flex justify-between ">

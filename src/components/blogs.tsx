@@ -1,8 +1,9 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { BookOpen, Eye } from "lucide-react";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import * as avatar from "../../public/images/avatar.png"
+import * as avatar from "../../public/images/avatar (1).png"
 
 export const Blogs = () => {
     return (

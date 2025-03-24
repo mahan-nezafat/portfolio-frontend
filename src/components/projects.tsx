@@ -24,6 +24,7 @@ export const Projects = () => {
                 <div className="flex flex-col">
                     <p className="text-(--primary) text-right text-md font-normal mb-8">
                     ربات هوش مصنوعی کاگنو
+                    </p>
                     <ul className="*:mr-3 dir-rtl flex flex-col list-disc text-sm font-[iranbakhregular] text-(--secondary) pt-2">
                         <li>ربات تلگرام</li>
                         <li>مکالمه با مدل زبانی لاما 3</li>
@@ -34,7 +35,6 @@ export const Projects = () => {
                         <li>CI دیپلوی با داکر و داکر کامپوز , دارای پایپ لاین </li>
                         <li>استفاده از سرور لوکال تلگرام برای سرعت بالاتر و برداشتن محدودیت های تلگرام</li>
                     </ul>
-                    </p>
                     <div className="grid grid-cols-2 gap-4">
                         <Image
                             src={cogno1}
@@ -74,6 +74,7 @@ export const Projects = () => {
                 <div>
                     <p className="text-(--primary) text-right text-md font-normal mb-8">
                     ربات سوشیال مدیا 
+                    </p>
                     <ul className="*:mr-3 dir-rtl flex flex-col list-disc text-sm font-[iranbakhregular] text-(--secondary) pt-2">
                         <li> ربات تلگرام</li>
                         <li>یوتیوب دانلودر</li>
@@ -83,7 +84,6 @@ export const Projects = () => {
                         <li>CI دیپلوی با داکر و داکر کامپوز , دارای پایپ لاین </li>
                         <li>استفاده از سرور لوکال تلگرام برای سرعت بالاتر و برداشتن محدودیت های تلگرام</li>
                     </ul>
-                    </p>
                    
                     <div className="grid grid-cols-2 gap-4">
                         <Image
@@ -115,13 +115,13 @@ export const Projects = () => {
                 <div>
                     <p className="text-(--primary) text-right text-md font-normal mb-8">
                         پلتفرم خرید و فروش آنلاین طلا
+                    </p>
                     <ul className="*:mr-3 dir-rtl flex flex-col list-disc text-sm font-[iranbakhregular] text-(--secondary) pt-2">
                         <li>ماشین حساب و نمودار طلا</li>
                         <li>احراز هویت کاربر</li>
                         <li>پنل کاربری</li>
                         <li>کیف پول</li>
                     </ul>
-                    </p>
                    
                     <div className="grid grid-cols-2 gap-4">
                         <Image
