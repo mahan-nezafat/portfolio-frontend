@@ -13,5 +13,5 @@ RUN npm install
 
 EXPOSE 3000
 
-USER docker
+USER root
 CMD ./setup.sh
