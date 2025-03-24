@@ -9,7 +9,7 @@ COPY . .
 
 RUN npm install
 
-RUN npm build
+RUN next build
 
 EXPOSE 3000
 
