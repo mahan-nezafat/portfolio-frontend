@@ -1,26 +1,71 @@
 @import "tailwindcss";
-
+@font-face {
+  font-family: iranbakhbold;
+  /* src: url(../../public/fonts/Vazirmatn-Bold.ttf); */
+  src: url(../../public/fonts/YekanBakh-Bold.woff);
+}
+@font-face {
+  font-family: iranbakhblack;
+  /* src: url(../../public/fonts/Vazirmatn-Black.ttf); */
+  src: url(../../public/fonts/YekanBakh-Black.woff);
+}
+@font-face {
+  font-family: iranbakhregular;
+  /* src: url(../../public/fonts/Vazirmatn-Regular.ttf); */
+  src: url(../../public/fonts/YekanBakh-Regular.woff);
+}
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #FAFAFA;
+  --background: #09090B;
+  --primary: #FAFAFA;
+  --secondary: #A1A1AA;
+  --neutral: #09090B;
+  /* --accent: (0deg, rgba(2,0,36,1) 0%, rgba(23,47,166,1) 0%, rgba(15,191,233,1) 87%); */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --primary: var(--primary);
+  --secondary: var(--secondary);
+  --neutral: var(--neutral);
+  /* --accent: (0deg, rgba(2,0,36,1) 0%, rgba(23,47,166,1) 0%, rgba(15,191,233,1) 87%); */
+  /* --shadowed: linearGradient(0deg, rgba(255,255,255,1) 30%, rgba(2,0,36,1) 100%); */
+}
+.linear-accent {
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(23,47,166,1) 0%, rgba(15,191,233,1) 87%);
+}
+.linear-shadowed {
+  background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(2,0,36,1) 100%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+ul {
+  direction: rtl !important;
+}
+.faded-border-buttom {
+  /* color: var(--primary); */
+  /* opacity: 30%; */
+  border-bottom: 1px;
+  border-style: solid;
+  border-color:rgba(161,161,170,30%);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: iranbakhregular, sans-serif;
+  direction: rtl;
+}
+
+.dir-ltr {
+  direction: ltr;
+
+}
+
+.img-bg {
+  background-image: url(../../public/images/unsplash.png);
+  background-size: cover;
 }
