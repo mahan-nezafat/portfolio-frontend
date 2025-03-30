@@ -35,7 +35,7 @@ export const Blogs = () => {
                                 <span>3 دقیقه</span>
                             </div>
                         </div>
-                        <div className="flex flex-col justify-center items-start w-[90%]">
+                        <div className="flex flex-col justify-center items-start text-(--primary) w-[90%]">
                             <h1 className="text-lg font-[iranbakhbold]">
                                 چرا برنامه نویسی برای همه لازم است؟
                             </h1>
