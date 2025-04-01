@@ -8,7 +8,7 @@ import Image from "next/image";
 import * as cogno1 from "../../public/images/cogno1.png"
 import * as cogno2 from "../../public/images/cogno2.png"
 import * as cogno3 from "../../public/images/cogno3.png"
-import * as cogno4 from "../../public/images/cogno4.png"
+// import * as cogno4 from "../../public/images/cogno4.png"
 import * as social1 from "../../public/images/social1.png"
 import * as social2 from "../../public/images/social2.png"
 import * as social3 from "../../public/images/social3.png"
@@ -25,7 +25,7 @@ export const Projects = () => {
                     <p className="text-(--primary) text-right text-md font-normal mb-8">
                     ربات هوش مصنوعی کاگنو
                     </p>
-                    <ul className="*:mr-3 dir-rtl flex flex-col list-disc text-sm font-[iranbakhregular] text-(--secondary) pt-2">
+                    <ul className="*:mr-3 dir-rtl mb-5 flex flex-col list-disc text-sm font-[iranbakhregular] text-(--secondary) pt-2">
                         <li>ربات تلگرام</li>
                         <li>مکالمه با مدل زبانی لاما 3</li>
                         <li>مکالمه با مدل زبانی دیپسیک </li>
@@ -35,35 +35,35 @@ export const Projects = () => {
                         <li>CI دیپلوی با داکر و داکر کامپوز , دارای پایپ لاین </li>
                         <li>استفاده از سرور لوکال تلگرام برای سرعت بالاتر و برداشتن محدودیت های تلگرام</li>
                     </ul>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1 max-md:ml-3">
                         <Image
                             src={cogno1}
                             alt="startup template"
                             width={500}
                             height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                            className="rounded-lg object-cover  h-20 max-md:h-60 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                         />
                         <Image
                             src={cogno2}
                             alt="startup template"
                             width={500}
                             height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                            className="rounded-lg object-cover max-md:bg-cover h-20 max-md:h-60 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                         />
                         <Image
                             src={cogno3}
                             alt="startup template"
                             width={500}
                             height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                            className="rounded-lg object-cover max-md:bg-cover h-20 max-md:h-60 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                         />
-                        <Image
+                        {/* <Image
                             src={cogno4}
                             alt="startup template"
                             width={500}
                             height={500}
                             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
+                        /> */}
                     </div>
                 </div>
             ),
@@ -75,7 +75,7 @@ export const Projects = () => {
                     <p className="text-(--primary) text-right text-md font-normal mb-8">
                     ربات سوشیال مدیا 
                     </p>
-                    <ul className="*:mr-3 dir-rtl flex flex-col list-disc text-sm font-[iranbakhregular] text-(--secondary) pt-2">
+                    <ul className="*:mr-3 dir-rtl mb-5  flex flex-col list-disc text-sm font-[iranbakhregular] text-(--secondary) pt-2">
                         <li> ربات تلگرام</li>
                         <li>یوتیوب دانلودر</li>
                         <li>دانلود ویدیو های یوتیوب به صورت صوتی و تصویری با فرمت های مختلف</li>
@@ -85,24 +85,24 @@ export const Projects = () => {
                         <li>استفاده از سرور لوکال تلگرام برای سرعت بالاتر و برداشتن محدودیت های تلگرام</li>
                     </ul>
                    
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-4  max-md:grid-cols-1 max-md:ml-3">
                         <Image
                             src={social1}                          alt="hero template"
                             width={500}
                             height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                            className="rounded-lg object-cover max-md:bg-cover h-20 max-md:h-60 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                         />
                         <Image
                             src={social2}                         alt="feature template"
                             width={500}
                             height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                            className="rounded-lg object-cover max-md:bg-cover h-20 max-md:h-60 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                         />
                         <Image
                             src={social3}                        alt="bento template"
                             width={500}
                             height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                            className="rounded-lg object-cover max-md:bg-cover h-20 max-md:h-60 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                         />
                         
                     </div>
@@ -116,31 +116,31 @@ export const Projects = () => {
                     <p className="text-(--primary) text-right text-md font-normal mb-8">
                         پلتفرم خرید و فروش آنلاین طلا
                     </p>
-                    <ul className="*:mr-3 dir-rtl flex flex-col list-disc text-sm font-[iranbakhregular] text-(--secondary) pt-2">
+                    <ul className="*:mr-3 dir-rtl  mb-5  flex flex-col list-disc text-sm font-[iranbakhregular] text-(--secondary) pt-2">
                         <li>ماشین حساب و نمودار طلا</li>
                         <li>احراز هویت کاربر</li>
                         <li>پنل کاربری</li>
                         <li>کیف پول</li>
                     </ul>
                    
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-4  max-md:grid-cols-1 max-md:ml-3">
                         <Image
                             src={gold1}                          alt="hero template"
                             width={500}
                             height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                            className="rounded-lg min-lg:object-cover max-md:bg-cover h-20 max-md:h-60 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                         />
                         <Image
                             src={gold2}                         alt="feature template"
                             width={500}
                             height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                            className="rounded-lg min-lg:object-cover max-md:bg-cover h-20 max-md:h-60 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                         />
                         <Image
                             src={gold3}                      alt="bento template"
                             width={500}
                             height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                            className="rounded-lg min-lg:object-cover max-md:bg-cover h-20 max-md:h-60 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                         />
                         
                     </div>
@@ -153,7 +153,7 @@ export const Projects = () => {
         <>
             <div className="flex flex-col w-full justify-start items-start  mt-[100px]">
                 <div className="flex w-full justify-between items-center mt-10">
-                <h1 className="pr-10 pb-1 text-5xl bg-clip-text text-transparent bg-gradient-to-b to-gray-800 font-[iranbakhbold] from-[#FFFFFF]">
+                <h1 className="pr-10 max-md:pr-5 pb-1 text-5xl bg-clip-text text-transparent bg-gradient-to-b to-gray-800 font-[iranbakhbold] from-[#FFFFFF]">
                     پروژه ها
                 </h1>
                     <Link
@@ -163,9 +163,7 @@ export const Projects = () => {
                         بیشتر
                         <IoIosArrowRoundBack className="text-xl" />
                     </Link>
-                    {/* <h6 className="text-(--secondary)">
-                        پروژه ها انجام شده توسط من بر اساس زمان
-                    </h6> */}
+                    
                 </div>
             <Timeline data={data} />
             </div>

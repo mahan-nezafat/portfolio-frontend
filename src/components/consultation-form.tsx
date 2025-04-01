@@ -7,7 +7,8 @@ import { useEffect, useState } from "react";
 // import { Input } from "@/components/ui/input"
 import { InputOtp } from "./otp-input";
 import axios from "axios";
-import { MoonLoader, SyncLoader } from "react-spinners";
+import { SyncLoader } from "react-spinners";
+import toast from "react-hot-toast";
 
 export default function ConsultationForm() {
     const [firstName, setFirstName] = useState("");
@@ -18,7 +19,7 @@ export default function ConsultationForm() {
     const [seconds, setSeconds] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const [error, setError] = useState("");
-    const [spin, setSpin] = useState(false)
+    const [spin, setSpin] = useState(false);
     async function handleSendOtp(e) {
         e.preventDefault();
         if (phone.length < 11 || firstName.length <= 0 || lastName.length <= 0)
@@ -27,7 +28,7 @@ export default function ConsultationForm() {
         const otpObj = {
             phoneNumber: phone,
             firstName,
-            lastName
+            lastName,
         };
 
         setMinutes(2);
@@ -40,36 +41,49 @@ export default function ConsultationForm() {
                 "Content-Type": "application/json",
             },
         });
-        console.log(data);
+        // console.log(data);
     }
-    async function handleSubmit (e: React.FormEvent) {
+    async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
         try {
-          
-          if (value.length < 6) return setError("کد تایید را کامل وارد کنید")
-          setSpin(true)
-          const formObj = {
-            firstName,
-            lastName,
-            phoneNumber: phone,
-            otp: value,
-            role: "CUSTOMER"
-          }
-          const data = await axios("http://localhost:3001/auth/request-consultation", {
-            method: "POST",
-            data: JSON.stringify(formObj),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
-          console.log(formObj);
-          console.log(data.data)
+            if (value.length < 6) return setError("کد تایید را کامل وارد کنید");
+            setSpin(true);
+            const formObj = {
+                firstName,
+                lastName,
+                phoneNumber: phone,
+                otp: value,
+                role: "CUSTOMER",
+            };
+            setTimeout(() => setSpin(false), 2000);
+            const data = await axios(
+                "http://localhost:3001/auth/request-consultation",
+                {
+                    method: "POST",
+                    data: JSON.stringify(formObj),
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
+            );
+            const toastRes = new Promise((resolve, reject) => {
+                resolve(data);
+            });
+            toast.promise(toastRes, {
+                loading: "در حال ثبت درخواست",
+                success: "درخواست شما با موفقیت ثبت شد!",
+                error: "مشکلی در ثبت درخواست پیش آمد دوباره امتحان کنید!",
+            });
+
+           
+
+            sessionStorage.setItem("jwt", data.data.jwt);
+
+            // console.log(data.data)
         } catch (error) {
-          console.log(error)
-        } finally {
-          setTimeout(() => setSpin(false), 3000)
+            console.log(error);
         }
-    };
+    }
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -99,18 +113,14 @@ export default function ConsultationForm() {
                     فرم مشاوره
                 </h1>
 
-                <form
-                   
-                    className="space-y-6 w-full"
-                    dir="rtl"
-                >
+                <form className="space-y-6 w-full" dir="rtl">
                     <div className="space-y-2 w-full flex justify-between ">
                         <div className="w-[48%]">
                             <label
                                 htmlFor="name"
                                 className="block text-right w-full"
                             >
-                                نام  
+                                نام
                             </label>
                             <input
                                 id="firstname"
@@ -125,7 +135,7 @@ export default function ConsultationForm() {
                                 htmlFor="name"
                                 className="block text-right w-full"
                             >
-                                  نام خانوادگی  
+                                نام خانوادگی
                             </label>
                             <input
                                 id="lastname"
@@ -171,7 +181,6 @@ export default function ConsultationForm() {
                             {error}
                         </span>
                         <InputOtp
-                            
                             disable={isDisable}
                             value={value}
                             setValue={setValue}
@@ -188,10 +197,17 @@ export default function ConsultationForm() {
                             onClick={handleSubmit}
                             className="relative  cursor-pointer w-full h-14 bg-black hover:opacity-80 text-white text-lg m-[1px] rounded-md"
                         >
-                            
-                         {spin ? 
-                          <SyncLoader  loading={true} className="dir-ltr" speedMultiplier={1} color="#0969C1" size={10} />
-                         : "ثبت درخواست"}
+                            {spin ? (
+                                <SyncLoader
+                                    loading={true}
+                                    className="dir-ltr"
+                                    speedMultiplier={1}
+                                    color="#0969C1"
+                                    size={10}
+                                />
+                            ) : (
+                                "ثبت درخواست"
+                            )}
                         </button>
                     </div>
                 </form>

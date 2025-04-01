@@ -4,13 +4,13 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { HiOutlineDownload } from "react-icons/hi";
 import { LuLanguages } from "react-icons/lu";
-import { FloatingDock } from "./ui/floatingdock";
+// import { FloatingDock } from "./ui/floatingdock";
 import { MobileNav } from "./mobilenav";
 // import { useWindowSize } from "@uidotdev/usehooks";
 export const Nav = () => {
     const [windowWidthSize, setWindowWidthSize] = useState(0);
     useEffect(() => {
-        console.log(windowWidthSize);
+        // console.log(windowWidthSize);
         function trackWidth() {
             setWindowWidthSize(window.innerWidth);
         }

@@ -8,7 +8,7 @@ import { Projects } from "@/components/projects";
 import { Services } from "@/components/services";
 import { Steps } from "@/components/steps";
 import { useState } from "react";
-
+import { Toaster  } from "react-hot-toast";
 export default function Home() {
     const [isActive, setActive] = useState<boolean>(false);
 
@@ -17,9 +17,10 @@ export default function Home() {
             {isActive && (
                 <div id="overlay" className=" w-[100%] max-md:w-full h-[100vh] fixed z-100">
                     <div className="blur-none w-[30vw] max-md:w-[90vw] max-md:h-[75vh] h-[80vh] bg-(--neutral)
-                     border-[1px] border-(--secondary) rounded-lg fixed translate-x-[-6%] translate-y-5">
+                     border-[1px] border-(--secondary) rounded-lg fixed max-md:translate-x-[-6%] translate-x-[-120%]  translate-y-5">
                         <ConsultationForm />
                     </div>
+
                 </div>
             )}
 
@@ -34,6 +35,8 @@ export default function Home() {
                 <Steps />
                 <Blogs />
             </main>
+            <Toaster position="bottom-left" toastOptions={{duration: 3000}} />
+
         </div>
     );
 }

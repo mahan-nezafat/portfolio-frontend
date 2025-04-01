@@ -5,6 +5,7 @@ import Image from "next/image";
 // import * as hero from "../../public/images/hero.webp";
 import * as heroSvg from "../../public/images/avatar.png";
 import { useEffect } from "react";
+import toast from "react-hot-toast";
 // import { div } from "motion/react-client";
 // import ConsultationForm from "./consultation-form";
 
@@ -17,6 +18,7 @@ export const Hero = ({ isActive, setActive }: HeroProps, ) => {
     function handleAppointment(e) {
         e.preventDefault();
         if (e.target.id === "appointment" && !isActive) {
+           
             return setActive(true);
         }
         if (e.target.id === "overlay" ) {
@@ -30,7 +32,7 @@ export const Hero = ({ isActive, setActive }: HeroProps, ) => {
 
         window.addEventListener("click", handleAppointment);
         
-        console.log(isActive)
+        // console.log(isActive)
         return () => window.removeEventListener("click", handleAppointment);
     }, [isActive, setActive]);
 

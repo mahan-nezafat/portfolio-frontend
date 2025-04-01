@@ -43,19 +43,19 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex flex-row-reverse justify-between pt-10 md:gap-10 w-full"
+            className="flex flex-row-reverse max-md:w-full justify-between pt-10 md:gap-10 w-full"
           >
             <div className="sticky justify-end flex  z-40 items-start top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute w-10 right-[-9%] rounded-full bg-transparent flex items-center justify-center">
-                <div className="h-4 w-4 rounded-full bg-(--secondary) border border-neutral-500  p-2" />
+                <div className="h-4 w-4  rounded-full bg-(--secondary) border border-neutral-500  p-2" />
               </div>
               <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl  text-neutral-500 dark:text-neutral-500 ">
                 {item.title}
               </h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-[60%] ">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
+            <div className="relative pl-20 pr-4 md:pl-4 w-[60%] max-md:w-full max-md:pr-10 max-md:pl-0 ">
+              <h3 className="md:hidden max-md:text-end block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
               {item.content}{" "}
@@ -66,7 +66,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           style={{
             height: height + "px",
           }}
-          className="absolute right-[-1%] top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
+          className="absolute max-md:right-[5.5%] right-[-1%] max-xl:right-[-1.5%] top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
         >
           <motion.div
             style={{

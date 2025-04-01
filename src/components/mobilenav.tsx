@@ -18,7 +18,7 @@ export function MobileNav() {
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/",
     },
 
     {
@@ -26,14 +26,14 @@ export function MobileNav() {
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/projects",
     },
     {
       title: "خدمات",
       icon: (
         <IconTool className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/services",
     },
     
     {
@@ -41,7 +41,7 @@ export function MobileNav() {
       icon: (
         <IconBrandBlogger className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/blogs",
     },
 
     {
@@ -49,7 +49,7 @@ export function MobileNav() {
       icon: (
         <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://www.instagram.com/mahan._.programmer",
     },
     {
       title: "گیت هاب",

@@ -63,13 +63,13 @@ export const StickySteps = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="relative flex w-full justify-around h-[30rem] justify-center space-x-10 overflow-y-auto rounded-md p-10 hide-scrollbar"
+      className="max-md:pr-2  max-md:justify-start relative flex w-full justify-around h-[30rem] space-x-10 overflow-y-auto rounded-md p-10 hide-scrollbar"
       ref={ref}
     >
-      <div className="div relative flex items-start px-4 w-[60%]">
-        <div className="w-[70%]">
+      <div className="div relative flex items-start px-4 w-[60%] max-md:w-full">
+        <div className="w-[70%] max-md:w-full">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-40">
+            <div key={item.title + index} className="my-40 max-md:flex max-md:flex-col max-md:w-full">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -88,7 +88,7 @@ export const StickySteps = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg mt-10 max-w-sm text-(--secondary)"
+                className="text-kg mt-10 max-w-sm text-(--secondary) max-md:w-full"
               >
                 {item.description}
               </motion.p>
@@ -100,7 +100,7 @@ export const StickySteps = ({
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "sticky top-10 hidden h-80 w-100 overflow-hidden rounded-md bg-white lg:block ",
+          "sticky top-10 max-md:hidden h-80 w-100 overflow-hidden rounded-md bg-white lg:block ",
           contentClassName,
         )}
       >

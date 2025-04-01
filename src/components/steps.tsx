@@ -62,7 +62,7 @@ export const Steps = () => {
     return (
         <>
             <div className="w-full py-4">
-                <h1 className="pr-10 text-5xl bg-clip-text text-transparent bg-gradient-to-b to-gray-800 font-[iranbakhbold] from-[#FFFFFF]">مراحل همکاری </h1>
+                <h1 className="max-md:pr-2 pr-10 text-5xl bg-clip-text text-transparent bg-gradient-to-b to-gray-800 font-[iranbakhbold] from-[#FFFFFF]">مراحل همکاری </h1>
                 <StickySteps content={content} />
             </div>
         </>
