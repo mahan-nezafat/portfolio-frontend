@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3003",
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.2.4",
     "@tabler/icons-react": "^3.31.0",
     "@uidotdev/usehooks": "^2.4.1",
     "axios": "^1.8.4",

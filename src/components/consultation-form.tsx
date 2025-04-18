@@ -20,7 +20,7 @@ export default function ConsultationForm() {
     const [minutes, setMinutes] = useState(0);
     const [error, setError] = useState("");
     const [spin, setSpin] = useState(false);
-    async function handleSendOtp(e) {
+    async function handleSendOtp(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.preventDefault();
         if (phone.length < 11 || firstName.length <= 0 || lastName.length <= 0)
             return setError("اسم یا شماره همراه نا معتبر");
@@ -34,7 +34,7 @@ export default function ConsultationForm() {
         setMinutes(2);
         setDisable(!isDisable);
 
-        const data = await axios("http://localhost:3001/auth/send-otp", {
+        const data = await axios("https://mahannezafat.ir:3001/auth/send-otp", {
             method: "POST",
             data: JSON.stringify(otpObj),
             headers: {
@@ -57,7 +57,7 @@ export default function ConsultationForm() {
             };
             setTimeout(() => setSpin(false), 2000);
             const data = await axios(
-                "http://localhost:3001/auth/request-consultation",
+                "https://mahannezafat.ir:3001/auth/request-consultation",
                 {
                     method: "POST",
                     data: JSON.stringify(formObj),
