@@ -14,12 +14,12 @@ FROM node:20-alpine AS runner
 
 WORKDIR /frontend
 
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/next.config.ts ./
-COPY --from=builder /app/tsconfig.json ./
-COPY --from=builder /app/src ./src
+COPY --from=builder /frontend/.next ./.next
+COPY --from=builder /frontend/public ./public
+COPY --from=builder /frontend/package*.json ./
+COPY --from=builder /frontend/next.config.ts ./
+COPY --from=builder /frontend/tsconfig.json ./
+COPY --from=builder /frontend/src ./src
 
 RUN npm install --omit=dev
 
