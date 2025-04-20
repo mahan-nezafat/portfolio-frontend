@@ -4,7 +4,7 @@ FROM node:20-alpine AS builder
 WORKDIR /frontend
 
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 COPY . .
 RUN npm run build
@@ -14,14 +14,12 @@ FROM node:20-alpine AS runner
 
 WORKDIR /frontend
 
+
 COPY --from=builder /frontend/.next ./.next
 COPY --from=builder /frontend/public ./public
 COPY --from=builder /frontend/package*.json ./
-COPY --from=builder /frontend/next.config.ts ./
-COPY --from=builder /frontend/tsconfig.json ./
-COPY --from=builder /frontend/src ./src
 
-RUN npm install --omit=dev
+RUN npm ci --omit=dev && npm cache clean --force
 
 EXPOSE 3003
 
