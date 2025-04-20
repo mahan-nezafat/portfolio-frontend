@@ -15,12 +15,13 @@ FROM node:20-alpine AS runner
 WORKDIR /frontend
 
 
-COPY --from=builder /frontend/.next ./.next
 COPY --from=builder /frontend/public ./public
-COPY --from=builder /frontend/package*.json ./
+COPY --from=builder /frontend/.next/static ./.next/static
+COPY --from=builder /frontend/.next/standalone ./.next/standalone
 
-RUN npm ci --omit=dev && npm cache clean --force
+
+
 
 EXPOSE 3003
 
-CMD ["npm", "run", "start"]
+CMD ["node", "./.next/standalone/server.js"]
