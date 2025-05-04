@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/third-parties": "^15.2.4",
+    "@radix-ui/react-select": "^2.2.2",
     "@tabler/icons-react": "^3.31.0",
     "@uidotdev/usehooks": "^2.4.1",
     "axios": "^1.8.4",
