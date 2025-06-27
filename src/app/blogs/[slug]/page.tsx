@@ -1,4 +1,5 @@
 "use client";
+export const runtime = 'edge';
 import Footer from "@/components/footer";
 import { Nav } from "@/components/nav";
 import { useParams, usePathname, useSearchParams } from "next/navigation";
