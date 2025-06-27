@@ -34,7 +34,7 @@ export default function ConsultationForm() {
         setMinutes(2);
         setDisable(!isDisable);
 
-        const data = await axios("https://mahannezafat.ir:3001/auth/send-otp", {
+        const data = await axios("https://localhost:443/auth/send-otp", {
             method: "POST",
             data: JSON.stringify(otpObj),
             headers: {
@@ -57,7 +57,7 @@ export default function ConsultationForm() {
             };
             setTimeout(() => setSpin(false), 2000);
             const data = await axios(
-                "https://mahannezafat.ir:3001/auth/request-consultation",
+                "https://localhost:443/auth/request-consultation",
                 {
                     method: "POST",
                     data: JSON.stringify(formObj),
