@@ -34,14 +34,14 @@ export default function ConsultationForm() {
         setMinutes(2);
         setDisable(!isDisable);
 
-        const data = await axios("https://localhost:443/auth/send-otp", {
+        const data = await axios(`${process.env.NEXT_PUBLIC_BACKEND_HOST_NAME}/auth/send-otp`, {
             method: "POST",
             data: JSON.stringify(otpObj),
             headers: {
                 "Content-Type": "application/json",
             },
         });
-        // console.log(data);
+        console.log(data);
     }
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
@@ -57,7 +57,7 @@ export default function ConsultationForm() {
             };
             setTimeout(() => setSpin(false), 2000);
             const data = await axios(
-                "https://localhost:443/auth/request-consultation",
+                `${process.env.NEXT_PUBLIC_BACKEND_HOST_NAME}/auth/request-consultation`,
                 {
                     method: "POST",
                     data: JSON.stringify(formObj),

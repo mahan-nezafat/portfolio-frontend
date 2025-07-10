@@ -5,6 +5,8 @@ import { Nav } from "@/components/nav";
 import { useParams, usePathname, useSearchParams } from "next/navigation";
 import * as avatar from "../../../../public/images/avatar (1).png";
 import * as thumbnail from "../../../../public/images/unsplash.png";
+import * as thumbnail2 from "../../../../public/images/istock.jpg";
+
 import Image from "next/image";
 import { BookOpen, Eye } from "lucide-react";
 const Page = () => {
@@ -36,21 +38,24 @@ const Page = () => {
                 },
                 {
                     subImageSrc: thumbnail,
-                    subHeader: "برنامه نویسی یعنی چه؟",
+                    subHeader: "زبان آینده‌ساز دنیای دیجیتال",
                     subParagraph:
-                        "به ساخت برنامه های کامپیوتر که با استفاده از زبان های برنامه نویسی انجام میشود برنامه نویسی میگویند",
+                "برنامه‌نویسی دیگر فقط مخصوص مهندسان نرم‌افزار نیست؛ بلکه تبدیل به مهارتی پایه مثل خواندن و نوشتن شده است. در دنیایی که همه چیز از گوشی هوشمند تا یخچال و خودرو با نرم‌افزار کار می‌کند، درک منطق برنامه‌نویسی باعث می‌شود افراد بهتر بتوانند با تکنولوژی تعامل داشته باشند و تصمیمات هوشمندانه‌تری بگیرند. حتی در مشاغل غیرمرتبط، آشنایی با اصول برنامه‌نویسی می‌تواند روند کار را بهینه کند."        
                 },
                 {
                     subImageSrc: thumbnail,
-                    subHeader: "برنامه نویسی یعنی چه؟",
+                    subHeader:" پرورش تفکر منطقی و حل مسئله",
                     subParagraph:
-                        "به ساخت برنامه های کامپیوتر که با استفاده از زبان های برنامه نویسی انجام میشود برنامه نویسی میگویند",
+                 `برنامه‌نویسی تنها نوشتن کد نیست؛ بلکه فرآیندی است که ذهن را برای تفکر گام‌به‌گام و حل مسئله تربیت می‌کند. کسانی که برنامه‌نویسی یاد می‌گیرند، در تحلیل مسائل، پیدا کردن الگوها و یافتن راه‌حل‌های مؤثر مهارت پیدا می‌کنند. این نوع تفکر، در زندگی شخصی و حرفه‌ای بسیار کاربردی است، حتی اگر فرد هیچ‌گاه به‌طور مستقیم کدنویسی نکند.  
+                 `
+                      
                 },
                 {
                     subImageSrc: thumbnail,
-                    subHeader: "برنامه نویسی یعنی چه؟",
+                    subHeader: " فرصت‌های شغلی و استقلال مالی",
                     subParagraph:
-                        "به ساخت برنامه های کامپیوتر که با استفاده از زبان های برنامه نویسی انجام میشود برنامه نویسی میگویند",
+                 `امروزه با یادگیری برنامه‌نویسی می‌توان بدون نیاز به سرمایه زیاد، پروژه‌های شخصی راه‌اندازی کرد، فریلنسری انجام داد یا در شرکت‌های مطرح دنیا به‌صورت دورکاری فعالیت کرد. این مهارت، دروازه‌ای است به دنیای فرصت‌ها که محدود به موقعیت جغرافیایی یا مدرک دانشگاهی نیست. یادگیری آن می‌تواند به افراد استقلال مالی و انعطاف‌پذیری شغلی ببخشد.
+                 `
                 },
             ],
         },
@@ -70,10 +75,10 @@ const Page = () => {
                         width={520}
                         height={100}
                     />
-                    <div className="flex justify-between pt-3 px-8 text-(--secondary) w-full">
+                    <div className="flex justify-start gap-3 pt-3 px-8 text-(--secondary) w-full">
                         <span>{blog.date}</span>
-                        <div className="w-[20%] flex justify-between">
-                            <div className="flex w-[50%] justify-start items-center gap-2 text-sm text-(--secondary)">
+                        <div className="w-[20%] flex justify-start">
+                            <div className="flex w-[30%] justify-start items-center text-sm text-(--secondary)">
                                 <Eye className="w-[40px]" />
                                 <span>{blog.views}</span>
                             </div>
@@ -96,13 +101,13 @@ const Page = () => {
                                     <Image
                                     src={item.subImageSrc}
                                     alt="thumbnail"
-                                    className="w-[80%] mx-auto h-[200px]"
+                                    className="w-[80%] mx-auto h-[400px]"
                                     width={520}
                                     height={100}
                                 />
                                 }
                                 <h3 className="text-(--primary) text-2xl font-[iranbakhbold]">{item.subHeader}</h3>
-                                <p className="text-(--secondary) ">{item.subParagraph}</p>
+                                <p className="text-(--secondary) px-5 ">{item.subParagraph}</p>
                             </div>
                         );
                     })}
@@ -111,7 +116,7 @@ const Page = () => {
                     <div className="flex flex-col justify-between bg-[rgba(255,255,255,5%)] rounded pb-10">
                         <div className="flex my-3 justify-between px-3 w-full">
                             <h2 className="text-4xl text-(--primary) font-[iranbakhbold]">نظرات</h2>
-                            <button className="from-blue-600 to-blue-800 via-blue-700 bg-gradient-to-l rounded text-white px-10 text-lg py-1">ثبت نظر</button>
+                            <button className="ml-4 from-blue-600 to-blue-800 via-blue-700 bg-gradient-to-l rounded text-white px-10 text-lg py-1">ثبت نظر</button>
                         </div>
                         <div className="flex flex-col w-[95%] rounded px-3 mx-auto py-4 bg-[rgba(255,255,255,6%)]">
                             <div className="flex text-white justify-between w-full">

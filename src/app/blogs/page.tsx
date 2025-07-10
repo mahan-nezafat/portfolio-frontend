@@ -116,9 +116,9 @@ const Page = () => {
                         </SelectTrigger>
                         <SelectContent
                             onClick={(e) => handleSelect(e)}
-                            className="text-(--primary)"
+                            className="text-(--primary) bg-black z-10"
                         >
-                            <SelectGroup>
+                            <SelectGroup className="bg-black">
                                 {/* <SelectLabel>Fruits</SelectLabel> */}
                                 <SelectItem id="1" value="recent">
                                     بروز ترین
