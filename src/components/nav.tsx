@@ -23,7 +23,7 @@ export const Nav = () => {
     return (
         <>
             {windowWidthSize > 970 ? (
-                <nav className="flex w-full h-10 my-2 pb-2 justify-between items-center faded-border-buttom">
+                <nav className="flex w-full h-12  py-2 mb-2  justify-between items-center faded-border-buttom">
                     <div className="flex mr-2 md:w-[30%] w-[20%] h-full items-center text-(--secondary)">
                         <ul className="flex  w-full justify-around  *:hover:text-(--primary) *:transition-colors *:duration-300 *:ease-in-out">
                             {/* <Image alt="" src=""/> */}
