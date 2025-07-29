@@ -58,45 +58,7 @@ const Page = () => {
             slug: "coding",
             category: "coding",
         },
-        {
-            views: 30,
-            readTime: 180,
-            title: "چرا برنامه نویسی برای همه لازم است؟",
-            shortDesc: `یکی از مهارت های مهمی که در زندگی میتونه کمک کنه
-                                به افراد`,
-            thumbnailSrc: thumbnail,
-            avatarSrc: avatar,
-            author: "ماهان نظافت",
-            date: "3 اسفند 1403",
-            slug: "coding",
-            category: "coding",
-        },
-        {
-            views: 30,
-            readTime: 180,
-            title: "چرا برنامه نویسی برای همه لازم است؟",
-            shortDesc: `یکی از مهارت های مهمی که در زندگی میتونه کمک کنه
-                                به افراد`,
-            thumbnailSrc: thumbnail,
-            avatarSrc: avatar,
-            author: "ماهان نظافت",
-            date: "3 اسفند 1403",
-            slug: "coding",
-            category: "coding",
-        },
-        {
-            views: 30,
-            readTime: 180,
-            title: "چرا برنامه نویسی برای همه لازم است؟",
-            shortDesc: `یکی از مهارت های مهمی که در زندگی میتونه کمک کنه
-                                به افراد`,
-            thumbnailSrc: thumbnail,
-            avatarSrc: avatar,
-            author: "ماهان نظافت",
-            date: "3 اسفند 1403",
-            slug: "coding",
-            category: "coding",
-        },
+       
     ];
     return (
         <>

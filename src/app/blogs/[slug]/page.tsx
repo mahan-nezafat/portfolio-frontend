@@ -126,8 +126,9 @@ const Page = () => {
                                 </div>
                                 <span>1404/2/14</span>
                             </div>
-                            <p className="text-(--secondary)">ممنون بابت این بلاگ آموزنده ممنون بابت این بلاگ آموزنده ممنون بابت ا
-                            ممنون بابت این بلاگ آموزنده </p>
+                            <p className="text-(--secondary)">
+                                ممنون بابت مطالعه بلاگ نظراتتون رو این پایین میتوانید کامنت کنید.
+                            </p>
                             <div className="flex justify-end items-center"> 
                             <button className="bg-(--primary) w-30 rounded h-10 text-sm font-[iranbakhbold] text-(--neutral)">پاسخ به نظر</button>
 

@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-
+@import '../styles/_variables.scss';
+@import '../styles/_keyframe-animations.scss';
 /* @custom-variant dark (&:is(.dark *)); */
 @font-face {
   font-family: iranbakhbold;
@@ -119,9 +120,9 @@ ul {
 }
 
 body {
-  font-family: iranbakhregular, sans-serif;
-  direction: rtl;
-  background-color: #09090B;
+  font-family: iranbakhregular, sans-serif !important;
+  direction: rtl !important;
+  background-color: #09090B !important;
 }
 
 .dir-ltr {
