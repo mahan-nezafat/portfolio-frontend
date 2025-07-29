@@ -13,7 +13,7 @@ export const Blogs = () => {
                     بلاگ
                 </h1>
                 <Link
-                    href="/projects"
+                    href="/blogs"
                     className="ml-4 text-(--primary) flex justify-center items-center hover:nth-2:translate-x-[-3px] transition-all duration-200  ease-in-out "
                 >
                     بیشتر
