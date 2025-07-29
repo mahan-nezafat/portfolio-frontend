@@ -118,9 +118,9 @@ export const Projects = () => {
                     </p>
                     <ul className="*:mr-3 dir-rtl  mb-5  flex flex-col list-disc text-sm font-[iranbakhregular] text-(--secondary) pt-2">
                         <li>ماشین حساب و نمودار طلا</li>
-                        <li>احراز هویت کاربر</li>
-                        <li>پنل کاربری</li>
-                        <li>کیف پول</li>
+                        <li>احراز هویت پیامکی کاربر </li>
+                        <li>پنل کاربری , داشبورد , کیف پول , معامله سریع و لیمیت طلا , تحویل حضوری , گزارشات و تیکت پشتیبانی</li>
+                        <li>دارای بخش ادمین : لیست کاربران, لیست تراکنش ها و سفارشات , ثبت کارمزد و صندوق طلا , سیستم تیکت , ارسال اعلانات, ثبت گالری های طلا </li>
                     </ul>
                    
                     <div className="grid grid-cols-2 gap-4  max-md:grid-cols-1 max-md:ml-3">
