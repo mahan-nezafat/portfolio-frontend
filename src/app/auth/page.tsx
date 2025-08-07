@@ -10,6 +10,7 @@ import axios from "axios";
 import { SyncLoader } from "react-spinners";
 import toast from "react-hot-toast";
 import { redirect, useRouter } from "next/navigation";
+import api from "@/handlers/api.handler";
 // import { InputOTP } from "@/components/ui/input-otp";
 
 export default function Auth() {
@@ -59,11 +60,10 @@ export default function Auth() {
         role: "ADMIN",
       };
       setTimeout(() => setSpin(false), 2000);
-      const data = await axios(
-        `${process.env.NEXT_PUBLIC_BACKEND_HOST_NAME}/auth/login`,
+      const data = await api.post(
+        `/auth/login`,
+        formObj,
         {
-          method: "POST",
-          data: JSON.stringify(formObj),
           headers: {
             "Content-Type": "application/json",
           },

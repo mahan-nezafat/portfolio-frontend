@@ -6,25 +6,7 @@ import StarterKit from "@tiptap/starter-kit";
 import { IBlog } from "@/app/panel/blogs/page";
 const CreateBlogForm = ({blogObject, setBlogObject}) => {
   const [file, setFile] = useState<File|null>(null)
-  // const editor = useEditor({
-  //   extensions: [SimpleEditor],
-  //   content: "<h1>شروع به نوشتن کنید...</h1>",
-  // immediatelyRender: false
-  // })
-// const b1 = {
-//    title: "greet",
-//   status: "UNPUBLISH",
-//   file: null,
-//   category: "greet",
-//   readTime: "12",
-//   authorSummary: "asdf",
-//   language: "FARSI",
-//   shortDesc: "asdfasdf",
-//   content: "<h1>hello</h1>",
-// }
-//   useEffect(() => {
-//     setBlogObject(b1)
-//   }, [])
+ 
 
   return (
     <div className="text-(--primary) py-5">
@@ -70,7 +52,7 @@ const CreateBlogForm = ({blogObject, setBlogObject}) => {
         className="hidden"
         onChange={(e) => setBlogObject(prev => ({
             ...prev,
-            file: e.target.files?.[0] 
+            thumbnailfile: e.target.files?.[0] 
           }))}
         // onChange={(e) => { setFile(e.target.files?.[0] || null)
         //    console.log(e.target.files?.[0]) }}
@@ -136,7 +118,7 @@ const CreateBlogForm = ({blogObject, setBlogObject}) => {
         <div className="w-[68%]">
           <h1>محتوا بلاگ</h1>
           <div className="border-[1px] w-full h-125 rounded  overflow-auto z-100">
-            <SimpleEditor setBlogObject={setBlogObject}/>
+            <SimpleEditor object={blogObject} setObject={setBlogObject}/>
           </div>
         </div>
       </form>
