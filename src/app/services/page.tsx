@@ -126,7 +126,7 @@ const Page = () => {
                 </div>
             </div>
             </div>
-            <footer>
+            {/* <footer>
                 <div className="flex mt-5 flex-col items-center text-(--primary)">
                     <div className="flex flex-col justify-center mb-10 items-center">
                         <span>gmail: nezafatmahan@gmail.com</span>
@@ -140,7 +140,7 @@ const Page = () => {
                     <HeartIcon/>
                     by mahan</span>
                 </div>
-            </footer>
+            </footer> */}
         </div>
         </>
     );
