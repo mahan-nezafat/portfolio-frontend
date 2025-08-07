@@ -38,7 +38,7 @@ export default function Home() {
                 <Steps />
                 <Blogs />
             </main>
-            <footer>
+            {/* <footer>
                 <div className="flex flex-col items-center text-(--primary)">
                     <div className="flex flex-col justify-center mb-10 items-center">
                         <span>gmail: nezafatmahan@gmail.com</span>
@@ -52,7 +52,8 @@ export default function Home() {
                     <HeartIcon/>
                     by mahan</span>
                 </div>
-            </footer>
+            </footer> */}
+            
             <Toaster position="bottom-left" toastOptions={{duration: 3000}} />
 
         </div>
