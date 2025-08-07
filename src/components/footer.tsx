@@ -13,7 +13,7 @@ const Footer = () => {
                                 href="https://instagram.com/mahan._.programmer"
                                 className="border-blue-400 border-[1px] p-1 rounded"
                             >
-                                <InstagramIcon className="" />
+                            <InstagramIcon/>
                             </Link>
                             <Link
                                 href="https://github.com/mahan-nezafat"

@@ -6,6 +6,10 @@ import * as v1 from "../../../videos"
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import api from "@/handlers/api.handler";
+import { MoonLoader } from "react-spinners";
+import ProjectCard from "@/components/project-card";
+import camelcaseKeys from "camelcase-keys";
 const Projects = () => {
   const router = useRouter();
   const [cardsData, setCardsData] = useState<Array<any>|null>(null)
@@ -18,7 +22,7 @@ const Projects = () => {
    useEffect(() => {
     async function getProjects() {
       // axios.get("http://localhost:3001/projects")
-     const {data} = await  axios.get("http://localhost:3001/projects")
+     const {data} = await  api.get("/projects")
      setCardsData(data.data)
     }
     getProjects()
@@ -33,30 +37,43 @@ const Projects = () => {
         </h1>
         <div className="flex flex-wrap justify-start items-center gap-10 m-10">
           {/* <Image src={p1} alt="project" className="w-20 h-20 opacity-60"/> */}
-         
+            {!cardsData && 
+            <div className="w-full h-full flex justify-center items-center">
+                <MoonLoader
+                  loading={true}
+                  className="dir-ltr"
+                  speedMultiplier={1}
+                  color="#FFFFFF"
+                  size={100}
+                />
+              </div>
+
+            }
             {cardsData &&
               cardsData.map((card, i) => {
-                return( 
-                <div key={i+1}
-              onMouseEnter={() => setPlayVideo(card.name)}
-              onMouseLeave={() => setPlayVideo(null)}
-              onClick={() => handleOnClick(card.name)}
-              className={`rounded overflow-hidden relative items-center cursor-pointer w-60 h-100 bg-gradient-to-b ${card.background_color}  `}
-            >
-               {playVideo !== card.name  && (
-             <div className="flex flex-col justify-center w-full h-full items-center object-cover">
-               <h3 className="font-[iranbakhbold] text-(--primary) text-2xl">{card.name}</h3>
-              <span className="text-amber-50">Tech:{card.tech}</span>
-             </div>
-            )}
+                const project = camelcaseKeys(card, { deep: true })
+                return(
+                  <ProjectCard project={project} key={i}/> 
+            //     <div key={i+1}
+            //   onMouseEnter={() => setPlayVideo(card.name)}
+            //   onMouseLeave={() => setPlayVideo(null)}
+            //   onClick={() => handleOnClick(card.name)}
+            //   className={`rounded overflow-hidden relative items-center cursor-pointer w-60 h-100 bg-gradient-to-b ${card.background_color}  `}
+            // >
+            //    {playVideo !== card.name  && (
+            //  <div className="flex flex-col justify-center w-full h-full items-center object-cover">
+            //    <h3 className="font-[iranbakhbold] text-(--primary) text-2xl">{card.name}</h3>
+            //   <span className="text-amber-50">Tech:{card.tech}</span>
+            //  </div>
+            // )}
             
-            <div>
-              <video autoPlay muted loop className={`object-cover ${playVideo === card.name ? "opacity-100" : "opacity-0"} duration-500 ease-in-out transition-all absolute left-0 top-0 w-60 h-120`}>
-                <source src={card.preview_src} type="video/mp4" />
-              </video>
-            </div>
+            // <div>
+            //   <video autoPlay muted loop className={`object-cover ${playVideo === card.name ? "opacity-100" : "opacity-0"} duration-500 ease-in-out transition-all absolute left-0 top-0 w-60 h-120`}>
+            //     <source src={card.preview_src} type="video/mp4" />
+            //   </video>
+            // </div>
           
-            </div>
+            // </div>
               )
               })
             }
