@@ -3,7 +3,7 @@ import Image from "next/image";
 
 // import Link from "next/link";
 // import * as hero from "../../public/images/hero.webp";
-import * as heroSvg from "../../public/images/avatar.png";
+import * as heroSvg from "../../public/images/avatar (1).png";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
 // import { div } from "motion/react-client";

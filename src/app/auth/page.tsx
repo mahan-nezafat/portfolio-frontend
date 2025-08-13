@@ -109,7 +109,7 @@ export default function Auth() {
     <div className="flex items-center justify-center h-full w-full  p-4">
       <div id="consultform" className="w-full h-full  space-y-8 text-white">
         <h1 className=" bg-clip-text text-transparent bg-gradient-to-b to-[#020024]  text-3xl pb-3 from-[#FFFFFF] text-center mb-8">
-          فرم مشاوره
+          فرم ورود
         </h1>
 
         <form className="space-y-6 w-full" dir="rtl">

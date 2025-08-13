@@ -38,7 +38,8 @@ export const Nav = () => {
                     <div className="flex w-[20%] h-full ml-4 gap-4 items-center justify-start flex-row-reverse">
                         {/* <button className="flex items-center justify-around bg-foreground text-background w-30 h-8 p-0.5 rounded"> */}
                         <Link
-                            href="/resume"
+                            target="blank"
+                            href="https://portfolio-storage.storage.iran.liara.space/mahan-nezafat_resume_fullstack.pdf"
                             className="hover:opacity-95 font-[iranbakhblack] flex items-center justify-around bg-(--primary) text-(--neutral) w-30 h-8 lg:p-0.5 rounded md:p-4"
                         >
                             <HiOutlineDownload className="text-2xl" />
