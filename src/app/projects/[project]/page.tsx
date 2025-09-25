@@ -1,4 +1,5 @@
 "use client";
+export const runtime = 'edge';
 import { Nav } from "@/components/nav";
 import Image from "next/image";
 import * as avatar from "../../../../public/images/avatar (1).png";
