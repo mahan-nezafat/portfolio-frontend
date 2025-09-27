@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { BookOpen, Eye } from "lucide-react";
 import Image from "next/image";
 import * as avatar from "../../public/images/avatar (1).png";
@@ -18,11 +18,10 @@ const ProjectCard = ({ project, setProjectOperation, setProjectObject }) => {
   async function getOneProject() {
     let data;
     if (path.startsWith("/panel")) {
-      data = await api.get( `/panel/project/?id=${project.id}`);
-
-    }else if(path.startsWith("/projects")) {
-      data = await api.get( `/projects/project/?id=${project.id}`);
-      
+      data = await api.get(`/panel/project/?id=${project.id}`);
+      setProjectOperation("update");
+    } else if (path.startsWith("/projects")) {
+      data = await api.get(`/projects/project/?id=${project.id}`);
     }
     // const { data } = await api.get(`/panel/project/?id=${project.id}`);
     console.log(data?.data.data);
@@ -34,12 +33,7 @@ const ProjectCard = ({ project, setProjectOperation, setProjectObject }) => {
       <div
         onMouseEnter={() => setPlayVideo(project.name)}
         onMouseLeave={() => setPlayVideo(null)}
-        onClick={() => {
-          if (path.startsWith("/panel")) {
-            setProjectOperation("update");
-            return getOneProject();
-          }
-        }}
+        onClick={() => getOneProject()}
         className={`rounded overflow-hidden relative items-center cursor-pointer w-full h-100 bg-gradient-to-b ${project.backgroundColor}  `}
       >
         {playVideo !== project.name && (

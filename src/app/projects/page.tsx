@@ -26,8 +26,8 @@ const Projects = () => {
      setCardsData(data.data)
     }
     getProjects()
-  },[cardsData])
-  console.log(cardsData)
+  },[])
+  // console.log(cardsData)
   return (
     <>
       <Nav />
