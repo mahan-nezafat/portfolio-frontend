@@ -22,6 +22,7 @@ const ProjectCard = ({ project, setProjectOperation, setProjectObject }) => {
       setProjectOperation("update");
     } else if (path.startsWith("/projects")) {
       data = await api.get(`/projects/project/?id=${project.id}`);
+      router.push(`/projects/${project.id}`);
     }
     // const { data } = await api.get(`/panel/project/?id=${project.id}`);
     console.log(data?.data.data);

@@ -6,29 +6,35 @@ import * as avatar from "../../../../public/images/avatar (1).png";
 import Footer from "@/components/footer";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import api from "@/handlers/api.handler";
+import { useParams } from "next/navigation";
+import camelcaseKeys from "camelcase-keys";
 
 const Project = () => {
+    const { id } = useParams();
+    const [project, setProject] = useState<null | object>(null);
+  
   useEffect(() => {
     async function getProjects() {
-      // axios.get("http://localhost:3001/projects")
-    //  const projects = await  api.get("/projects/project/?id=${project.id}")
-    //  console.log(projects.data.data)
+    const { data } = await api.get(`/projects/project/?id=${id}`);
+      console.log(data.data);
+      const transformedData = camelcaseKeys(data.data, { deep: true });
+      return setProject(transformedData);
     }
     getProjects()
-  },[])
-  const project = {
-    name: "لیندینگ پیج دیوار",
-    tech: " HTML, CSS, JS",
-    backgroundColor: "to-red-900 from-red-600",
-    previewUrl: "https://portfolio-storage.storage.iran.liara.space/v1.mp4",
-    projectName: "divar",
-    projectUrl: "https://divar-home-page.vercel.app/",
-    videoUrl: "https://portfolio-storage.storage.iran.liara.space/v1.mp4",
-    content: [{h1: "توضیحات پروژه",p: "لیندیگ پیج دیوار که با تکنولوژی های html,css,javascript ساخته شده "} ]
-  };
+  },[id])
+  // const project = {
+  //   name: "لیندینگ پیج دیوار",
+  //   tech: " HTML, CSS, JS",
+  //   backgroundColor: "to-red-900 from-red-600",
+  //   previewUrl: "https://portfolio-storage.storage.iran.liara.space/v1.mp4",
+  //   projectName: "divar",
+  //   projectUrl: "https://divar-home-page.vercel.app/",
+  //   videoUrl: "https://portfolio-storage.storage.iran.liara.space/v1.mp4",
+  //   content: [{h1: "توضیحات پروژه",p: "لیندیگ پیج دیوار که با تکنولوژی های html,css,javascript ساخته شده "} ]
+  // };
   return (
     <>
       <Nav />

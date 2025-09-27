@@ -62,21 +62,7 @@ const Page = () => {
     }
     getBlogs();
   }, []);
-  //   const blogs = [
-  //     {
-  //       title: "چرا برنامه نویسی برای همه لازم است؟",
-  //       views: 30,
-  //       readTime: 180,
-  //       shortDescription: `یکی از مهارت های مهمی که در زندگی میتونه کمک کنه
-  //                                 به افراد`,
-  //       thumbnailSrc: thumbnail,
-  //       avatarSrc: avatar,
-  //       author: "ماهان نظافت",
-  //       date: "3 اسفند 1403",
-  //       slug: "coding",
-  //       category: "coding",
-  //     },
-  //   ];
+
   return (
     <>
       <Nav />
@@ -184,38 +170,7 @@ const Page = () => {
         })}
       </div>
 
-      {/* <footer>
-        <div className="flex mt-5 flex-col items-center text-(--primary)">
-          <div className="flex flex-col justify-center mb-10 items-center">
-            <span>gmail: nezafatmahan@gmail.com</span>
-            <div className="flex justify-between items-center mt-4 w-full">
-              <Link
-                href="https://instagram.com/mahan._.programmer"
-                className="border-blue-400 border-[1px] p-1 rounded"
-              >
-                <InstagramIcon className="" />
-              </Link>
-              <Link
-                href="https://github.com/mahan-nezafat"
-                className="border-blue-400 border-[1px] p-1 rounded"
-              >
-                <GithubIcon className="" />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/mahan-nezafat/"
-                className="border-blue-400 border-[1px] p-1 rounded"
-              >
-                <LinkedinIcon className="" />
-              </Link>
-            </div>
-          </div>
-          <span className="flex flex-row-reverse gap-1">
-            made with
-            <HeartIcon />
-            by mahan
-          </span>
-        </div>
-      </footer> */}
+     
     </>
   );
 };
