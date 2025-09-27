@@ -20,7 +20,7 @@ const Page = () => {
   const sanitizedContent = DOMPurify.sanitize(blog?.content)
   useEffect(() => {
     async function getBlog() {
-      const { data } = await api.get(`/panel/blog/?id=${id}`);
+      const { data } = await api.get(`/blogs/blog/?id=${id}`);
       console.log(data.data);
       const transformedData = camelcaseKeys(data.data, { deep: true });
       return setBlog(transformedData);

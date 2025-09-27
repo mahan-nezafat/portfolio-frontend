@@ -16,9 +16,17 @@ const ProjectCard = ({ project, setProjectOperation, setProjectObject }) => {
     return numbers.replace(/\d/g, (num) => "۰۱۲۳۴۵۶۷۸۹"[num]);
   }
   async function getOneProject() {
-    const { data } = await api.get(`/panel/project/?id=${project.id}`);
-    console.log(data.data);
-    const transformedData = camelcaseKeys(data.data, { deep: true });
+    let data;
+    if (path.startsWith("/panel")) {
+      data = await api.get( `/panel/project/?id=${project.id}`);
+
+    }else if(path.startsWith("/projects")) {
+      data = await api.get( `/projects/project/?id=${project.id}`);
+      
+    }
+    // const { data } = await api.get(`/panel/project/?id=${project.id}`);
+    console.log(data?.data.data);
+    const transformedData = camelcaseKeys(data?.data.data, { deep: true });
     return setProjectObject(transformedData);
   }
   return (

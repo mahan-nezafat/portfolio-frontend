@@ -8,13 +8,14 @@ import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { useEffect } from "react";
 import axios from "axios";
+import api from "@/handlers/api.handler";
 
 const Project = () => {
   useEffect(() => {
     async function getProjects() {
-      axios.get("http://localhost:3001/projects")
-     const projects = await  axios.get("http://localhost:3001/projects")
-     console.log(projects.data.data)
+      // axios.get("http://localhost:3001/projects")
+    //  const projects = await  api.get("/projects/project/?id=${project.id}")
+    //  console.log(projects.data.data)
     }
     getProjects()
   },[])

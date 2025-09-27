@@ -13,9 +13,16 @@ const BlogCard = ({ blog, setBlogOperation, setBlogObject }) => {
     return numbers.replace(/\d/g, (num) => "۰۱۲۳۴۵۶۷۸۹"[num]);
   }
   async function getOneBlog() {
-    const { data } = await api.get(`/panel/blog/?id=${blog.id}`);
-    console.log(data.data);
-    const transformedData = camelcaseKeys(data.data, { deep: true });
+    let data;
+    if (path.startsWith("/panel")) {
+      data = await api.get( `/panel/blog/?id=${blog.id}`);
+
+    }else if(path.startsWith("/blogs")) {
+      data = await api.get( `/blogs/blog/?id=${blog.id}`);
+      
+    }
+    console.log(data?.data.data);
+    const transformedData = camelcaseKeys(data?.data.data, { deep: true });
     return setBlogObject(transformedData);
   }
   return (
